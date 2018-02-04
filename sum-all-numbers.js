@@ -12,6 +12,20 @@ sumAll([1, 4]);
 
 // Solution //
 function sumAll(arr) {
+    return 1;
+}
+
+sumAll([1, 4]);
+
+// Solution //
+function sumAll(arr) {
+    return 1;
+}
+
+sumAll([1, 4]);
+
+// Solution //
+function sumAll(arr) {
     var low = Math.min.apply(Math, arr);
     var high = Math.max.apply(Math, arr);
     var total = 0;
@@ -31,11 +45,11 @@ function sumAll(arr) {
     var low = Math.min(...arr);
     var high = Math.max(...arr);
     var total = 0;
-    
+
     for (var i = low; i <= high; i++) {
-      total += i;
+        total += i;
     }
     return total;
-  }
-  
-  sumAll([1, 4]);
+}
+
+sumAll([1, 4]);
