@@ -1,55 +1,29 @@
-// freeCodeCamp Intermediate Algorithm Scripting Challenge #1 //
-// https://www.freecodecamp.org/challenges/sum-all-numbers-in-a-range //
+// freeCodeCamp Intermediate Algorithm Scripting Challenge #2 //
+// https://www.freecodecamp.org/challenges/diff-two-arrays //
 
-// Sum All Numbers in a Range //
-// We'll pass you an array of two numbers. //
-// Return the sum of those two numbers and all numbers between them. //
-function sumAll(arr) {
-    return 1;
+// Diff Two Arrays //
+// Compare two arrays and return a new array //
+// with any items only found in one of the two given arrays, //
+// but not both.
+function diffArray(arr1, arr2) {
+    var newArr = [];
+    // Same, same; but different.
+    return newArr;
 }
 
-sumAll([1, 4]);
+diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]);
 
 // Solution //
-function sumAll(arr) {
-    return 1;
-}
+function diffArray(arr1, arr2) {
+    var newArr = [];
+    var arrConcat = arr1.concat(arr2);
 
-sumAll([1, 4]);
-
-// Solution //
-function sumAll(arr) {
-    return 1;
-}
-
-sumAll([1, 4]);
-
-// Solution //
-function sumAll(arr) {
-    var low = Math.min.apply(Math, arr);
-    var high = Math.max.apply(Math, arr);
-    var total = 0;
-
-    for (var i = low; i <= high; i++) {
-        total += i;
+    for (var i = 0; i < arrConcat.length; i++) {
+        if (arr1.indexOf(arrConcat[i]) === -1 || arr2.indexOf(arrConcat[i]) === -1) {
+            newArr.push(arrConcat[i]);
+        }
     }
-    return total;
+    return newArr;
 }
 
-sumAll([1, 4]);
-
-// This was my original solution but the fCC interface was showing an error icon for the ES6 syntax //
-// so I came up with a slightly different solution. //
-// Turns out it would have accepted the ES6 syntax after all. //
-function sumAll(arr) {
-    var low = Math.min(...arr);
-    var high = Math.max(...arr);
-    var total = 0;
-
-    for (var i = low; i <= high; i++) {
-        total += i;
-    }
-    return total;
-}
-
-sumAll([1, 4]);
+diffArray([1, 2, 3, 4, 5], [1, 2, 3, 5]);
